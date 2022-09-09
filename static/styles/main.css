@@ -125,10 +125,10 @@
     align-items: center;
     justify-content: center;
 }
-/*
+
 .one{
-    margin-left: 15em;
-*/
+    min-width: 40px;
+
 }
 .two{
     margin-top: 10px;
