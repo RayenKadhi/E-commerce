@@ -13,8 +13,8 @@
                         <a class="btn btn-outline-secondary" href="{% url 'main' %}"> &#9754; Continue shopping </a>
                         <hr>
                         <div class="column">
-                                <h3 class="userF"> Items: {{order.get_item_total}}</h3>
-                                <h3 class="userF"> Total : {{order.get_cart_total|floatformat:2}}£</h3>
+                                        <h3 class="userF"> Items: {{order.get_item_total}}</h3>
+                                        <h3 class="userF"> Total : {{order.get_cart_total|floatformat:2}}£</h3>
                                 <a class="btn btn-success one" href="{% url 'checkout' %}"> Checkout </a>
                         </div>
 

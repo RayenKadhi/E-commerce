@@ -71,90 +71,91 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<div class="homeContainer">
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Chart showing how different series types can be combined in a single
+            chart. The chart is using a set of column series, overlaid by a line and
+            a pie series. The line is illustrating the column averages, while the
+            pie is illustrating the column totals.
+        </p>
+    </figure>
 
-<figure class="highcharts-figure">
-    <div id="container"></div>
-    <p class="highcharts-description">
-        Chart showing how different series types can be combined in a single
-        chart. The chart is using a set of column series, overlaid by a line and
-        a pie series. The line is illustrating the column averages, while the
-        pie is illustrating the column totals.
-    </p>
-</figure>
 
-
-<script type="text/javascript">
-    Highcharts.chart('container', {
-    title: {
-        text: 'Sales of our products March, all over the world',
-        align: 'left'
-    },
-    xAxis: {
-        categories: ['Socks', 'T-Shirts', 'Glasses', 'shoes', 'Hats']
-    },
-    yAxis: {
+    <script type="text/javascript">
+        Highcharts.chart('container', {
         title: {
-            text: 'Digital number by product'
-        }
-    },
-    labels: {
-        items: [{
-            html: 'Total (by product)',
-            style: {
-                left: '50px',
-                top: '18px',
-                color: ( // theme
-                    Highcharts.defaultOptions.title.style &&
-                    Highcharts.defaultOptions.title.style.color
-                ) || 'black'
+            text: 'Sales of our products on March, all over the world',
+            align: 'left'
+        },
+        xAxis: {
+            categories: ['Socks', 'T-Shirts', 'Glasses', 'shoes', 'Hats']
+        },
+        yAxis: {
+            title: {
+                text: 'Digital number by product'
+            }
+        },
+        labels: {
+            items: [{
+                html: 'Total (by product)',
+                style: {
+                    left: '50px',
+                    top: '18px',
+                    color: ( // theme
+                        Highcharts.defaultOptions.title.style &&
+                        Highcharts.defaultOptions.title.style.color
+                    ) || 'black'
+                }
+            }]
+        },
+        series: [{
+            type: 'column',
+            name: '2020',
+            data: [59, 83, 65, 228, 184]
+        }, {
+            type: 'column',
+            name: '2021',
+            data: [24, 79, 72, 240, 167]
+        }, {
+            type: 'column',
+            name: '2022',
+            data: [58, 88, 75, 250, 176]
+        }, {
+            type: 'spline',
+            name: 'Average',
+            data: [47, 83.33, 70.66, 239.33, 175.66],
+            marker: {
+                lineWidth: 2,
+                lineColor: Highcharts.getOptions().colors[3],
+                fillColor: 'white'
+            }
+        }, {
+            type: 'pie',
+            name: 'Liter',
+            data: [{
+                name: '2020',
+                y: 619,
+                color: Highcharts.getOptions().colors[0] // 2020 color
+            }, {
+                name: '2021',
+                y: 586,
+                color: Highcharts.getOptions().colors[1] // 2021 color
+            }, {
+                name: '2022',
+                y: 647,
+                color: Highcharts.getOptions().colors[2] // 2022 color
+            }],
+            center: [80, 70],
+            size: 100,
+            showInLegend: false,
+            dataLabels: {
+                enabled: false
             }
         }]
-    },
-    series: [{
-        type: 'column',
-        name: '2020',
-        data: [59, 83, 65, 228, 184]
-    }, {
-        type: 'column',
-        name: '2021',
-        data: [24, 79, 72, 240, 167]
-    }, {
-        type: 'column',
-        name: '2022',
-        data: [58, 88, 75, 250, 176]
-    }, {
-        type: 'spline',
-        name: 'Average',
-        data: [47, 83.33, 70.66, 239.33, 175.66],
-        marker: {
-            lineWidth: 2,
-            lineColor: Highcharts.getOptions().colors[3],
-            fillColor: 'white'
-        }
-    }, {
-        type: 'pie',
-        name: 'Liter',
-        data: [{
-            name: '2020',
-            y: 619,
-            color: Highcharts.getOptions().colors[0] // 2020 color
-        }, {
-            name: '2021',
-            y: 586,
-            color: Highcharts.getOptions().colors[1] // 2021 color
-        }, {
-            name: '2022',
-            y: 647,
-            color: Highcharts.getOptions().colors[2] // 2022 color
-        }],
-        center: [80, 70],
-        size: 100,
-        showInLegend: false,
-        dataLabels: {
-            enabled: false
-        }
-    }]
-});
-</script>
+    });
+    </script>
+</div>
 
 {% endblock content %}

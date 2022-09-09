@@ -64,7 +64,6 @@
     padding: .5em;
     justify-content: center;
     align-items: center;
-
 }
 .product--thumbnail{
     height: 200px;
@@ -73,7 +72,7 @@
 .buttons{
     display:block;
     width: 250px;
-    height: 140px;
+    min-height: 140px;
 
 }
 
@@ -97,6 +96,7 @@
     display: flex;
     align-items: center;
     margin-top: 2em;
+    gap: 2em;
 
 }
 .thumbnail{
@@ -109,11 +109,12 @@
     margin-bottom: 2em;
     min-width: 20em;
 }
-
+/*
 .TableVSImage{
     display:flex;
     gap: 0.5em;
 }
+*/
 .up{
     height: 25px;
     width: 25px;
@@ -310,4 +311,10 @@ body{
 }
 .formm{
     min-width:340px;
+}
+.homeContainer{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
