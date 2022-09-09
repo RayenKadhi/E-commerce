@@ -6,87 +6,87 @@
 
 {% block content %}
 <div class="boxes">
-<div>
-<form method="post" id="form">
-  {% csrf_token %}
+    <div class="box-element three">
+            <a class="btn btn-outline-secondary" href="{% url 'cart' %}"> &#9754;Back to Cart </a>
+            <hr>
+            <h1 class="Text"> Order Summary </h1>
+            <hr>
+            {% for items in items %}
+        <div class="TableVSImage TableVSImageOne">
+                <img class="thumbnail border border-secondary rounded roundedOK" src="{{items.product.imageURL}}">
+             <table class="table table-bordered">
+                                        <thead>
+                                                <tr>
+                                                        <th class="user user2">Item</th>
+                                                        <th class="user user2">Price</th>
+                                                        <th class="user user2">Quantity</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td class="user user2">{{items.product.name}}</td>
+                                                        <td class="user user2">{{items.product.price}}£</td>
+                                                        <td class="user user2"> X {{items.quantity}} </td>
+                                                </tr>
+                                        </tbody>
+             </table>
 
-        <div class="box-element two" id="form-wrapper">
-          <div class="row g-3 align-items-center">
-              <div id="User-Info" class="row g-3 align-items-center">
-              <div class="col-auto">
-                <input type="text" class="form-control" placeholder="First name" name="Firstname">
-              </div>
-              <div class="col-auto">
-                <input type="text" class="form-control" placeholder="Last name" name="Lastname">
-              </div>
-              <div class="col-auto">
-                <input type="text" class="form-control" placeholder="Email.." name="Email">
-              </div>
-                  <hr>
-
-              </div>
-              <div id="ShippingI">
-                  <div class="row g-3 align-items-center">
-                      <h4 class="ShippingInfo"> Shipping Information .. </h4>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="Address.." name="Address">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="State.." name="State">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="Zip Code.." name="ZipCode">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="City.." name="City">
-                      </div>
-                      <div class="col-auto">
-                        <input type="text" class="form-control" placeholder="Tel.." name="Tel">
-                      </div>
-                  </div>
-              </div>
-              <input id="form-button" class="btn btn-success" type="submit" value="Continue">
-          </div>
         </div>
-</form>
-<div class="box-element payment hidden" id="payment">
-    <small> Paypal Options </small>
-    <button> Make Payment </button>
-
-</div>
-</div>
-<div class="box-element three">
-        <a class="btn btn-outline-secondary" href="{% url 'cart' %}"> &#9754;Back to Cart </a>
-        <hr>
-        <h1 class="Text"> Order Summary </h1>
-        <hr>
-        {% for items in items %}
-    <div class="TableVSImage TableVSImageOne">
-    <img class="thumbnail border border-secondary rounded roundedOK" src="{{items.product.imageURL}}">
-     <table class="table table-bordered">
-                                <thead>
-                                        <tr>
-                                                <th class="user user2">Item</th>
-                                                <th class="user user2">Price</th>
-                                                <th class="user user2">Quantity</th>
-                                        </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                                <td class="user user2">{{items.product.name}}</td>
-                                                <td class="user user2">{{items.product.price}}£</td>
-                                                <td class="user user2"> X {{items.quantity}} </td>
-                                        </tr>
-                                </tbody>
-     </table>
-
+            {% endfor %}
+        <div class="TextVSTables">
+            <h3 class="ItemsTotal user"> Items: {{order.get_item_total}}</h3>
+            <h3 class="ItemsTotal user"> Total : {{order.get_cart_total|floatformat:2}}£</h3>
+        </div>
     </div>
-        {% endfor %}
-    <div class="TextVSTables">
-        <h3 class="ItemsTotal user"> Items: {{order.get_item_total}}</h3>
-        <h3 class="ItemsTotal user"> Total : {{order.get_cart_total|floatformat:2}}£</h3>
+        <div class="three formm">
+            <form method="post" id="form">
+              {% csrf_token %}
+
+                    <div class="box-element two" id="form-wrapper">
+                      <div class="row g-3 align-items-center">
+                          <div id="User-Info" class="row g-3 align-items-center">
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="First name" name="Firstname">
+                          </div>
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="Last name" name="Lastname">
+                          </div>
+                          <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="Email.." name="Email">
+                          </div>
+                              <hr>
+
+                          </div>
+                          <div id="ShippingI">
+                              <div class="row g-3 align-items-center">
+                                  <h4 class="ShippingInfo"> Shipping Information .. </h4>
+                                  <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="Address.." name="Address">
+                                  </div>
+                                  <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="State.." name="State">
+                                  </div>
+                                  <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="Zip Code.." name="ZipCode">
+                                  </div>
+                                  <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="City.." name="City">
+                                  </div>
+                                  <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="Tel.." name="Tel">
+                                  </div>
+                              </div>
+                          </div>
+                          <input id="form-button" class="btn btn-success" type="submit" value="Continue">
+                      </div>
+                    </div>
+            </form>
     </div>
-</div>
+    <div>
+        <div class="box-element three payment hidden" id="payment">
+            <button class="btn btn-success"> Make Payment </button>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">

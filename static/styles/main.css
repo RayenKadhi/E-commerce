@@ -91,11 +91,10 @@
 }
 .box{
     margin-top: 2em;
-
 }
+
 .column{
     display: flex;
-    gap: 10em;
     align-items: center;
     margin-top: 2em;
 
@@ -108,11 +107,12 @@
 .thumbnails{
     padding: center;
     margin-bottom: 2em;
-
+    min-width: 20em;
 }
+
 .TableVSImage{
     display:flex;
-    gap: 1em;
+    gap: 0.5em;
 }
 .up{
     height: 25px;
@@ -124,8 +124,10 @@
     align-items: center;
     justify-content: center;
 }
+/*
 .one{
     margin-left: 15em;
+*/
 }
 .two{
     margin-top: 10px;
@@ -134,15 +136,18 @@
 .ShippingInfo{
     font-size: 17px;
 }
+/*
 .boxes{
     display: flex;
 }
+*/
 .three{
-    width: 600px;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    min-width: 320px;
+    max-width: 600px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+
     padding: 1em;
 }
 .hidden{
@@ -219,17 +224,19 @@
 
 
 }
+/*
 .userF{
     font-size: 22px;
     font-weight: 600;
     font-family: 'Arial Narrow';
 }
+*/
 .centered{
     justify-content: center;
 }
 .rounded2{
-    width: 190px;
-    height: 110px;
+    width: 30px;
+    height: 30px;
 
 }
 
@@ -262,11 +269,11 @@ body{
 
 }
 .four{
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding:0px;
 }
 .button1{
     margin-top: 1em;
@@ -281,13 +288,13 @@ body{
     background-color: #87BEB6;
 }
 .txt{
-    font-size: 100px;
+    font-size: 50px;
     text-align:center;
 
 
 }
 .txt2{
-        font-size: 50px;
+        font-size: 30px;
 
 }
 .background{
@@ -297,4 +304,10 @@ body{
 .txt3{
     text-align:right;
     margin-right: 0.5em;
+}
+.center{
+    justify-content:center;
+}
+.formm{
+    min-width:340px;
 }
