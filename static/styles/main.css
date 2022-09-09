@@ -33,8 +33,10 @@
     margin-right: 2em;
 }
 
-.bg-light{
-    height: 50px;
+.color{
+    min-height: 100px;
+    min-width:320px;
+    background-color:#8BC59F;
 }
 .item-numeration{
     display: block;
@@ -259,9 +261,7 @@ body{
      margin: 100px;
 
 }
-.navbar{
-    background-color: red;
-}
+
 .five{
     margin-top: 2em;
     margin-left: 2em;
@@ -312,7 +312,6 @@ body{
 }
 .formm{
     min-width:340px;
-    margin-left:27%;
 }
 .homeContainer{
     margin-top: 20px;
