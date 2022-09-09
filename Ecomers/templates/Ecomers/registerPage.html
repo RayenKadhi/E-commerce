@@ -1,0 +1,87 @@
+{% extends 'Ecomers/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<!--
+<div class="boxes boxes-TWo">
+    <form>
+        {% csrf_token %}
+
+        <div class="box-element Login_1" id="form-wrapper">
+                <div class="LoginTitle"> Registration </div>
+                <div>
+                    <label class="form-label PassEmail">First Name</label>
+                    <input class="form-control">
+                </div>
+                <div>
+                    <label class="form-label PassEmail" >Last Name</label>
+                    <input class="form-control">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label PassEmail">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+
+                <div>
+                    <label for="exampleInputPassword1" class="form-label PassEmail">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div>
+                    <label for="exampleInputPassword1" class="form-label PassEmail">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2">
+                </div>
+                 <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-primary Login" value="Register">
+                 </div>
+        </div>
+    </form>
+</div>
+-->
+<script type="text/javascript">
+    var cart = document.getElementById("cart")
+    cart.innerHTML = ""
+
+</script>
+
+<div class="boxes boxes-TWo">
+    <div class="box-element Login_1" id="form-wrapper">
+        <div class="LoginTitle"> Registration </div>
+
+            <form class="login-form spacer" method="post">
+                {% csrf_token %}
+                    <div class="labels">
+                        {{form.first_name.label}}
+                        {{form.first_name}}
+                    </div>
+                    <div class="labels">
+                        {{form.last_name.label}}
+                        {{form.last_name}}
+                    </div>
+                    <div class="labels">
+                        {{form.username.label}}
+                        {{form.username}}
+                    </div>
+                    <diV class="labels">
+                        {{form.email.label}}
+                        {{form.email}}
+                    </diV>
+                    <div class="labels">
+                        {{form.password1.label}}
+                        {{form.password1}}
+
+                    </div>
+                    <div class="labels">
+                        {{form.password2.label}}
+                        {{form.password2}}
+                    </div>
+
+                <button type="submit" class="btn btn-secondary button1"  value="submit"> submit</button>
+            </form>
+    </div>
+</div>
+
+{% endblock content %}

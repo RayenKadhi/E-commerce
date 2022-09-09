@@ -1,0 +1,300 @@
+
+.container-fluid{
+    background-color: #71A698;
+    height: 150%;
+    max-width:100%;
+}
+
+#cart-icon{
+    height: 30px;
+    width: 30px;
+    margin-top: 0.5em;
+    }
+#store{
+    height: 50px;
+    width: 50px;
+    margin-top: 0.2em;
+    margin-left: 1.5em;
+    }
+#home{
+    height: 32px;
+    width: 32px;
+    margin-top: 0.2em;
+    margin-left: .5em
+}
+
+.icon-button{
+    display:flex;
+    gap: 1em;
+    align-items: center;
+}
+.cart{
+    display: flex;
+    margin-right: 2em;
+}
+
+.bg-light{
+    height: 50px;
+}
+.item-numeration{
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 25px;
+}
+
+.section_1{
+    background-color:#E5E5E5;
+    display: flex;
+    gap: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.product-description{
+    display:flex;
+    gap: 5em;
+    background-color:#9BC7C6;
+    padding: .5em;
+    justify-content: center;
+    align-items: center;
+
+}
+.product--thumbnail{
+    height: 200px;
+    width: 250px;
+}
+.buttons{
+    display:block;
+    width: 250px;
+    height: 140px;
+
+}
+
+.border-start{
+    display: flex;
+    gap: 2em;
+
+}
+.box-element{
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #fff
+    border-radius: 4px;
+    padding: 2em;
+
+}
+.box{
+    margin-top: 2em;
+
+}
+.column{
+    display: flex;
+    gap: 10em;
+    align-items: center;
+    margin-top: 2em;
+
+}
+.thumbnail{
+    height: 100px;
+    width: 160px;
+
+}
+.thumbnails{
+    padding: center;
+    margin-bottom: 2em;
+
+}
+.TableVSImage{
+    display:flex;
+    gap: 1em;
+}
+.up{
+    height: 25px;
+    width: 25px;
+}
+.up-down-number{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+.one{
+    margin-left: 15em;
+}
+.two{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.ShippingInfo{
+    font-size: 17px;
+}
+.boxes{
+    display: flex;
+}
+.three{
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 1em;
+}
+.hidden{
+    height: 100px;
+    margin-top: 1em;
+    margin-left: 2em;
+    display: none ! important;
+
+}
+.Text{
+    font-size: 25px;
+}
+.TableVSImageOne{
+    gap:2em;
+    margin-top: 2em;
+}
+.roundedOK{
+    height: 80px;
+    width: 130px;
+}
+
+.TextVSTables{
+    margin-top: 1em;
+}
+.ItemsTotal{
+    font-size: 20px;
+}
+
+.Login{
+    margin-top: 1em;
+
+}
+.boxes-TWo{
+    justify-content:center;
+    margin-top: 4em;
+}
+
+.PassEmail{
+    margin-top: 2em;
+    font-family: 'Times New Roman'
+    font-size: 20px;
+    font-weight: bold;
+}
+.LoginTitle{
+    text-align:center;
+    font-family: 'Times New Roman'
+    font-size: 2em;
+    letter-spacing: .1em;
+    font-weight: 700;
+    line-height: .9em;
+}
+
+.registration{
+    text-align: center;
+    margin-top:0.5em;
+}
+
+.user{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Arial Narrow';
+    vertical-align: middle;
+
+}
+.S{
+    color: #F0F8FF;
+
+}
+.ProductName{
+    font-size: 1.1em;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+
+
+}
+.userF{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Arial Narrow';
+}
+.centered{
+    justify-content: center;
+}
+.rounded2{
+    width: 190px;
+    height: 110px;
+
+}
+
+.items{
+    padding: center;
+}
+
+.user2{
+    font-size: 15px;
+
+}
+.auth{
+
+}
+body{
+     background-image: url(../images/Background.png);
+     padding: 0px;
+     margin: 100px;
+
+}
+.navbar{
+    background-color: red;
+}
+.five{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.five2{
+    margin-left: 2em;
+
+}
+.four{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+}
+.button1{
+    margin-top: 1em;
+}
+.labels{
+    margin-top: 1em;
+    font-family: 'Times New Roman'
+    font-size: 20px;
+    font-weight: bold;}
+
+.fluid{
+    background-color: #87BEB6;
+}
+.txt{
+    font-size: 100px;
+    text-align:center;
+
+
+}
+.txt2{
+        font-size: 50px;
+
+}
+.background{
+        background-image: url(../images/homee.png);
+
+}
+.txt3{
+    text-align:right;
+    margin-right: 0.5em;
+}

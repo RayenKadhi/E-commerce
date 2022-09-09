@@ -1,0 +1,160 @@
+{% extends 'Ecomers/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+<style>
+    .highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+</style>
+
+<script type="text/javascript">
+    var cart = document.getElementById("cart")
+    cart.innerHTML = ""
+
+</script>
+<div class="background">
+    <p class="txt"> Welcome to E-Commerce! <br> <p class="txt txt2"> This is a virtual website <p> </p>
+    <p class="txt3"> &#169; Mohamed Rayen Kadhi </p>
+</div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Chart showing how different series types can be combined in a single
+        chart. The chart is using a set of column series, overlaid by a line and
+        a pie series. The line is illustrating the column averages, while the
+        pie is illustrating the column totals.
+    </p>
+</figure>
+
+
+<script type="text/javascript">
+    Highcharts.chart('container', {
+    title: {
+        text: 'Sales of our products March, all over the world',
+        align: 'left'
+    },
+    xAxis: {
+        categories: ['Socks', 'T-Shirts', 'Glasses', 'shoes', 'Hats']
+    },
+    yAxis: {
+        title: {
+            text: 'Digital number by product'
+        }
+    },
+    labels: {
+        items: [{
+            html: 'Total (by product)',
+            style: {
+                left: '50px',
+                top: '18px',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'black'
+            }
+        }]
+    },
+    series: [{
+        type: 'column',
+        name: '2020',
+        data: [59, 83, 65, 228, 184]
+    }, {
+        type: 'column',
+        name: '2021',
+        data: [24, 79, 72, 240, 167]
+    }, {
+        type: 'column',
+        name: '2022',
+        data: [58, 88, 75, 250, 176]
+    }, {
+        type: 'spline',
+        name: 'Average',
+        data: [47, 83.33, 70.66, 239.33, 175.66],
+        marker: {
+            lineWidth: 2,
+            lineColor: Highcharts.getOptions().colors[3],
+            fillColor: 'white'
+        }
+    }, {
+        type: 'pie',
+        name: 'Liter',
+        data: [{
+            name: '2020',
+            y: 619,
+            color: Highcharts.getOptions().colors[0] // 2020 color
+        }, {
+            name: '2021',
+            y: 586,
+            color: Highcharts.getOptions().colors[1] // 2021 color
+        }, {
+            name: '2022',
+            y: 647,
+            color: Highcharts.getOptions().colors[2] // 2022 color
+        }],
+        center: [80, 70],
+        size: 100,
+        showInLegend: false,
+        dataLabels: {
+            enabled: false
+        }
+    }]
+});
+</script>
+
+{% endblock content %}

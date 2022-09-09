@@ -1,0 +1,72 @@
+{% extends 'Ecomers/main.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="container">
+
+        <div class="box">
+                <div class="box-element">
+                        <a class="btn btn-outline-secondary" href="{% url 'main' %}"> &#9754; Continue shopping </a>
+                        <hr>
+                        <div class="column">
+                                <h3 class="userF"> Items: {{order.get_item_total}}</h3>
+                                <h3 class="userF"> Total : {{order.get_cart_total|floatformat:2}}£</h3>
+                                <a class="btn btn-success one" href="{% url 'checkout' %}"> Checkout </a>
+                        </div>
+
+                </div>
+        </div>
+        <br>
+                        {% for items in items %}
+        <div class="box">
+                <div class="box-element thumbnails">
+                        <hr>
+                    <div class="TableVSImage">
+                        <img class="thumbnail border border-secondary rounded rounded2" src="{{items.product.imageURL}}">
+                        <table class="table table-bordered">
+                                <thead>
+                                        <tr>
+                                                <th class="user">Items</th>
+                                                <th class="user">Price</th>
+                                                <th class="user">Quantity</th>
+                                                <th class="user">Total</th>
+                                        </tr>
+                                </thead>
+                                <tbody class="items">
+                                        <div>
+                                                <tr>
+                                                        <td class="user">{{items.product.name}}</td>
+                                                        <td class="user">{{items.product.price |floatformat:2}}£</td>
+                                                        <td class="up-down-number">
+                                                                <h7 class="user"> {{items.quantity}} </h7>
+                                                                <div class="up-down">
+                                                                        <div>
+                                                                                <img data-product={{items.product.id}} data-action="add" class='up update-cart'  src="{% static 'images/up.png' %}">
+                                                                        </div>
+                                                                        <div>
+                                                                                <img data-product={{items.product.id}} data-action="remove" class='up update-cart'  src="{% static 'images/down.png' %}">
+                                                                        </div>
+
+                                                                </div>
+                                                        </td>
+                                                        <td class="user">{{items.get_total|floatformat:2}}£ </td>
+                                                </tr>
+                                        </div>
+                                </tbody>
+                        </table>
+                     </div>
+                        <hr>
+                </div>
+                {% endfor %}
+        </div>
+
+</section>
+
+
+
+
+{% endblock content %}

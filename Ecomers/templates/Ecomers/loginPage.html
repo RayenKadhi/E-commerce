@@ -1,0 +1,34 @@
+
+{% extends 'Ecomers/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<script type="text/javascript">
+    var cart = document.getElementById("cart")
+    cart.innerHTML = ""
+
+</script>
+
+
+<div class="boxes boxes-TWo">
+    <div class="box-element Login_1" id="form-wrapper">
+        <div class="LoginTitle"> Login </div>
+            <form  method="post">
+                {% csrf_token %}
+                 <div>
+                    <label class="form-label PassEmail">Username</label>
+                    <input class="form-control" name="Username">
+                </div>
+                <div>
+                    <label for="exampleInputPassword1" class="form-label PassEmail" >Password</label>
+                    <input type="password" class="form-control" name="Password">
+                </div>
+                <button type="submit"  class="btn btn-secondary button1" value="submit"> submit</button>
+                <div class="registration">Not registered? <a href="{% url 'registerPage'%}"> Create An Account! </a> </div>
+            </form>
+    </div>
+</div>
+
+{% endblock content %}
