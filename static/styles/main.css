@@ -162,6 +162,7 @@
     font-size: 25px;
 }
 .TableVSImageOne{
+    display:flex;
     gap:2em;
     margin-top: 2em;
 }
