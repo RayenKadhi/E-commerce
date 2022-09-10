@@ -14,7 +14,6 @@
     height: 50px;
     width: 50px;
     margin-top: 0.2em;
-    margin-left: 1.5em;
     }
 #home{
     height: 32px;
@@ -318,4 +317,8 @@ body{
     margin-left: 20px;
     margin-top:50px;
     margin-bottom:30px;
+}
+.loginlogout{
+    margin-left: 82%;
+
 }
