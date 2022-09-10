@@ -137,17 +137,18 @@ def loginPage(request):
         username = request.POST.get('Username')
         password = request.POST.get('Password')
         user = authenticate(request, username=username, password=password)
-        email = user.email
         try:
-            Customer.objects.create(user=user, name=username, email=email)
+            Customer.objects.create(user=user, name=username)
         except:
             pass
         if user is not None:
             login(request, user)
             return redirect('main')
+
     context = {}
 
     return render(request, 'Ecomers/loginPage.html', context)
+
 
 
 def logoutPage(request):

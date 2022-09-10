@@ -103,8 +103,9 @@
 
         if(shipping == 'False' && user != 'AnonymousUser'){
             document.getElementById('form-wrapper').classList.add('hidden')
-            document.getElementById('payment').classList.remove('hidden')
+            document.getElementById('payment').classList.add('hidden')
         }
+
 
         var form = document.getElementById('form')
         form.addEventListener('submit', function(e){
