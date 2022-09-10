@@ -72,7 +72,7 @@
 .buttons{
     display:block;
     width: 250px;
-    min-height: 140px;
+    min-height: 150px;
 
 }
 
@@ -321,14 +321,11 @@ body{
 }
 .loginlogout{
     margin-left: 82%;
-
 }
 .seven{
     width: 280px;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
-
     padding: 1em;
-
 }
