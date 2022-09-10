@@ -12,6 +12,11 @@
 </script>
 
 
+{% for messages in messages %}
+    <div class="alert alert-danger" role ="alert">
+        {{ messages }}
+    </div>
+{% endfor %}
 <div class="boxes boxes-TWo">
     <div class="box-element Login_1" id="form-wrapper">
         <div class="LoginTitle"> Login </div>

@@ -1,11 +1,12 @@
 import json
 from .models import *
 
+
 def cookieCart(request):
     try:
         cart_new = json.loads(request.COOKIES['cart_new'])
     except:
-        cart_new = {'rayen':20}
+        cart_new = {'rayen': 20}
 
     print('cart_newjson', cart_new)
 
@@ -20,7 +21,7 @@ def cookieCart(request):
             cart_items += cart_new[i]['quantity']
 
             product = Product.objects.get(id=i)
-            total =(product.price * cart_new[i]['quantity'])
+            total = (product.price * cart_new[i]['quantity'])
             print('total: ', cart_new[i]['quantity'])
             order['get_cart_total'] += total
             order['get_item_total'] += cart_new[i]['quantity']

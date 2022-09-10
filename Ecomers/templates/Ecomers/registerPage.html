@@ -80,8 +80,10 @@
                     </div>
 
                 <button type="submit" class="btn btn-secondary button1"  value="submit"> submit</button>
+                <div class="registration">Already registered? <a href="{% url 'loginPage'%}"> Sign in! </a> </div>
             </form>
     </div>
+    {{form.errors}}
 </div>
 
 {% endblock content %}

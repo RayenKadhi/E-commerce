@@ -11,6 +11,7 @@ from .utils import cookieCart, cartData, guestOrder
 from django.contrib.auth.forms import UserCreationForm
 from .forms import UserCreation
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 
 # Create your views here.
@@ -106,15 +107,16 @@ def processOrder(request):
     order.save()
 
     if order.shipping == True:
-        ShippingAddress.objects.create(
-            customer=customer,
-            order=order,
-            address=data['shppingInfo']['Address'],
-            state=data['shppingInfo']['State'],
-            ZipCode=float(data['shppingInfo']['ZipCode']),
-            city=data['shppingInfo']['City'],
+            ShippingAddress.objects.create(
+                customer=customer,
+                order=order,
+                address=data['shppingInfo']['Address'],
+                state=data['shppingInfo']['State'],
+                ZipCode=float(data['shppingInfo']['ZipCode']),
+                city=data['shppingInfo']['City'],
 
-        )
+            )
+
 
     return JsonResponse('Payment complete', safe=False)
 
@@ -126,6 +128,7 @@ def registerPage(request):
         form = UserCreation(request.POST)
         if form.is_valid():
             form.save()
+            message1=messages.success(request, 'Registration completed')
             return redirect('loginPage')
 
     context = {'form': form}
@@ -144,10 +147,10 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('main')
-
-    context = {}
-
-    return render(request, 'Ecomers/loginPage.html', context)
+        else:
+            messages.info(request, 'Pls repeat your username or password.')
+    context={}
+    return render(request, 'Ecomers/loginPage.html',context)
 
 
 
