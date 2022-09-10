@@ -46,6 +46,12 @@
       {% else %}
         <span class="user"> Hello, <span class="user S"> GUEST!</span> </span>
       {% endif %}
+      <div id="cart"   class="cart">
+            <a href="{% url 'cart' %}">
+                <img id="cart-icon" src="{% static 'images/cart-icon.png' %}">
+            </a>
+          <p class="item-numeration"> {{cart_items}} </p>
+        </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

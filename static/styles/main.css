@@ -29,7 +29,6 @@
 }
 .cart{
     display: flex;
-    margin-right: 2em;
 }
 
 .color{
@@ -73,7 +72,7 @@
 .buttons{
     display:block;
     width: 250px;
-    min-height: 140px;
+    height: 140px;
 
 }
 
@@ -106,9 +105,11 @@
 
 }
 .thumbnails{
+    justify-content: center;
     padding: center;
     margin-bottom: 2em;
     min-width: 20em;
+    justify-content: center;
 }
 /*
 .TableVSImage{
@@ -260,14 +261,14 @@ body{
      margin: 100px;
 
 }
-
+/*
 .five{
     margin-top: 2em;
     margin-left: 2em;
 }
 .five2{
     margin-left: 2em;
-
+*/
 }
 .four{
     margin-top: 10px;
@@ -320,5 +321,14 @@ body{
 }
 .loginlogout{
     margin-left: 82%;
+
+}
+.seven{
+    width: 280px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+
+    padding: 1em;
 
 }
