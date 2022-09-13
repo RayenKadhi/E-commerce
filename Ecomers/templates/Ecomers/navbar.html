@@ -1,44 +1,6 @@
 {% load static %}
 
-<!--
-<nav class="navbar navbar-expand-lg navbar-dark color">
-            <a href="{% url 'home' %}">
-                <img id="home" src="{% static 'images/home.png' %}">
-            </a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <a href="{% url 'main' %}">
-                <img id="store" src="{% static 'images/store.png' %}">
-            </a>
-      </ul>
 
-      <div class="icon-button">
-        {% if not request.user.is_authenticated %}
-          <span class="user"> Hello, <span class="user S"> GUEST!</span> </span>
-          <a class="btn btn-success" href="{% url 'loginPage' %}" role="button">Login</a>
-        {% else %}
-        <span class="user auth">Hello, <span class="user S"> {{request.user.first_name|upper}}!</span></span>
-          {% endif %}
-
-        <div id="cart"   class="cart">
-            <a href="{% url 'cart' %}">
-                <img id="cart-icon" src="{% static 'images/cart-icon.png' %}">
-            </a>
-          <p class="item-numeration"> {{cart_items}} </p>
-
-        </div>
-          {% if request.user.is_authenticated %}
-
-          <a class="btn btn-outline-secondary style" href="{% url 'logoutPage' %}" role="button">Logout</a>
-          {% endif %}
-
-
-      </div>
-  </div>
-</nav>
--->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
       {% if request.user.is_authenticated %}
@@ -46,12 +8,12 @@
       {% else %}
         <span class="user"> Hello, <span class="user S"> GUEST!</span> </span>
       {% endif %}
-      <div id="cart"   class="cart">
+      <div id="cart"  class="cart">
             <a href="{% url 'cart' %}">
                 <img id="cart-icon" src="{% static 'images/cart-icon.png' %}">
             </a>
           <p class="item-numeration"> {{cart_items}} </p>
-        </div>
+      </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,17 +22,19 @@
         <li class="nav-item">
             <a href="{% url 'home' %}">
                 <img id="home" src="{% static 'images/home.png' %}">
-            </a>         </li>
+            </a>
+        </li>
         <li class="nav-item">
             <a href="{% url 'main' %}">
                 <img id="store" src="{% static 'images/store.png' %}">
-            </a>       </li>
+            </a>
+        </li>
 
         <li class="nav-item">
              {% if request.user.is_authenticated %}
                <a class="btn btn-outline-secondary style" href="{% url 'logoutPage' %}" role="button">Logout</a>
             {% else %}
-                <a class="btn btn-success loginlogout" href="{% url 'loginPage' %}" role="button">Login</a></li>
+                <a class="btn btn-success loginlogout" href="{% url 'loginPage' %}" role="button">login</a></li>
           {% endif %}
       </ul>
 

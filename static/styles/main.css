@@ -313,11 +313,15 @@ body{
 .formm{
     min-width:340px;
 }
-.homeContainer{
+.highcharts-description{
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top:50px;
     margin-bottom:30px;
+.homeContainer{
+    margin-left: 400px;
+    margin-top: 700px;
+}
 }
 .loginlogout{
     margin-left: 82%;
@@ -328,4 +332,45 @@ body{
     margin-top:20px;
     margin-bottom:20px;
     padding: 1em;
+}
+
+@media only screen and (min-width: 991px){
+
+.loginlogout{
+    position: absolute;
+    right:0px;
+    top:3px;
+
+}
+#home{
+    height: 37px;
+    width: 37px;
+    margin-top: 0.2em;
+    position: absolute;
+    right:180px;
+    top:1.5px;
+
+
+}
+#store{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    right:110px;
+    top: -5px;
+    }
+
+.navbar-light{
+    height: 45px;
+
+}
+#cart-icon{
+    height: 35px;
+    width: 35px;
+    margin-left: 550px;
+    }
+.one{
+    margin-left: 500px;
+
+}
 }
